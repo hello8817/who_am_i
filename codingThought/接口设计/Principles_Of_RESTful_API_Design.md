@@ -23,9 +23,7 @@ Here’s a few of the important terms I will use throughout the course of this d
 
 
 
-Data Design and Abstraction
-
-数据设计与抽象
+### Data Design and Abstraction
 
 Planning how your API will look begins earlier than you’d think; first you need to decide how your data will be designed and how your core service / application will work. If you’re doing API First Development this should be easy. If you’re attaching an API to an existing project, you may need to provide more abstraction.
 
@@ -39,7 +37,7 @@ There are also many parts of your service which you SHOULD NOT expose via API at
 
 当然你的服务可能很多部分是不应该通过API暴露出去的。比较常见的例子就是很多API是不允许第三方来创建用户的。
 
-Verbs
+### Verbs
 
 动词
 
@@ -77,7 +75,7 @@ OPTIONS：获取客户端能对资源做什么操作的信息。
 
 一般来说，GET请求可以被浏览器缓存（通常也是这样的）。例如，缓存请求头用于第二次用户的POST请求。HEAD请求是基于一个无响应体的GET请求，并且也可以被缓存的。
 
-Versioning
+### Versioning
 
 版本化
 
@@ -101,7 +99,7 @@ A good RESTful API will keep track of the version in the URL. The other most com
 
  一个好的RESTful API会在URL中包含版本信息。另一种比较常见的方案是在请求头里面保持版本信息。但是跟很多不同的第三方开发者一起工作后，我可以很明确的告诉你，在请求头里面包含版本信息远没有放在URL里面来的容易。
 
-Analytics
+### Analytics
 
 分析
 
@@ -117,7 +115,7 @@ The process of Third Party Developer notification can be automated, e.g. mail th
 
 当然第三方开发者的通知流程可以以某种条件被自动触发，例如每当一个过时的特性上发生10000次请求时就发邮件通知开发者。
 
-API Root URL
+### API Root URL
 
 API根URL
 
@@ -151,7 +149,7 @@ https://api.example.com/v1/*
 
 同样也请注意HTTPS前缀，一个好的RESTful API总是基于HTTPS来发布的。
 
-Endpoints
+### Endpoints
 
 端点
 
@@ -227,7 +225,7 @@ DELETE /zoos/ZID/employees/EID: Fire an Employee from a specific Zoo
 
 请注意如何展示数据之间的关系，特别是雇员与动物园之间的多对多关系。通过添加一个额外的URL段就可以实现更多的交互能力。当然没有一个HTTP动词能表示正在解雇一个人，但是你可以使用DELETE一个动物园里的雇员来达到相同的效果。
 
-Filtering
+### Filtering
 
 过滤器
 
@@ -265,7 +263,7 @@ Also, this goes without saying, but whenever you perform filtering or sorting of
 
 
 
-Status Codes
+### Status Codes
 
 状态码
 
@@ -291,7 +289,8 @@ The Consumer referenced an inexistant Resource or Collection, and the Server did
 500 INTERNAL SERVER ERROR – [*]
 The Server encountered an error, and the Consumer has no knowledge if the request was successful
 服务器发生内部错误，客户端无法得知结果，即便请求已经处理成功
-Status Code Ranges
+
+### Status Code Ranges
 
 状态码范围
 
@@ -315,7 +314,7 @@ The 5xx range is reserved as a response when the Server makes a mistake. Often t
 
 5xx范围的状态码是保留给服务器端错误用的。这些错误常常是从底层的函数抛出来的，并且开发人员也通常没法处理。发送这类状态码的目的是确保客户端能得到一些响应。收到5xx响应后，客户端没办法知道服务器端的状态，所以这类状态码是要尽可能的避免。
 
-Expected Return Documents
+### Expected Return Documents
 
 预期的返回文档
 
@@ -339,7 +338,7 @@ PATCH /collection/resource: 返回完整的资源对象
 DELETE /collection/resource: 返回一个空文档
 请注意当一个客户端创建一个资源时，她们常常不知道新建资源的ID（也许还有其他的属性，如创建和修改的时间戳等）。这些属性将在随后的请求中返回，并且作为刚才POST请求的一个响应结果。
 
-Authentication
+### Authentication
 
 认证
 
@@ -357,7 +356,7 @@ OAuth2.0提供了一个非常好的方法去做这件事。在每一个请求里
 
 还有OAuth1.0和xAuth同样适用这样的场景。无论你选择哪个方法，请确保它为多种不同语言/平台上的库提供了一些通用的并且设计良好文档，因为你的用户可能会使用这些语言和平台来编写客户端。
 
-Content Type
+### Content Type
 
 内容类型
 
@@ -373,7 +372,7 @@ Some API creators recommend adding a .json, .xml, or .html file extension to the
 
 有些API的创建者会推荐把.json, .xml, .html等文件的扩展名放在URL里面来指示返回内容类型，但我个人并不习惯这么做。我依然喜欢通过接收头来指示返回内容类型（这也是HTTP标准的一部分），并且我觉得这么做也比较适当一些。
 
-Hypermedia APIs
+### Hypermedia APIs
 
 超媒体API
 
@@ -405,7 +404,7 @@ JSON doesn’t quite give us the semantics we need for specifying which attribut
 
 JSON不仅告诉了我们需要定义哪些属性作为URL，也告诉了我们如何将URL与当前文档关联的语义。正如你猜的那样，HTML就提供了这样的信息。我们可能很乐意看到我们的API走完了完整的周期，并回到了处理HTML上来。想一下我们与CSS一起前行了多远，有一天我们可能再次看到它变成了一个通用实践让API和网站可以去使用相同的URL和内容。
 
-Documentation
+### Documentation
 
 文档
 
@@ -433,7 +432,7 @@ Make sure your documentation can be printed; CSS is a powerful thing; don’t be
 
 另外确保你的文档能够被打印。CSS是个强大的工具可以帮助到你。而且在打印的时候也不用太担心边侧栏的问题。即便没有人会打印到纸上，你也会惊奇的发现很多开发者愿意转化成PDF格式进行离线阅读。
 
-Errata: Raw HTTP Packet
+### Errata: Raw HTTP Packet
 
 勘误：原始的HTTP封包
 
@@ -451,16 +450,7 @@ When designing your API, you should be able to work with tools which allow you t
 
 Example HTTP Request
 
-1
-2
-3
-4
-5
-6
-7
-8
-9
-10
+```
 POST /v1/animal HTTP/1.1
 Host: api.example.org
 Accept: application/json
@@ -471,21 +461,12 @@ Content-Length: 24
   "name": "Gir",
   "animal_type": 12
 }
- Example HTTP Response
 
-1
-2
-3
-4
-5
-6
-7
-8
-9
-10
-11
-12
-13
+```
+
+Example HTTP Response
+
+```
 HTTP/1.1 200 OK
 Date: Wed, 18 Dec 2013 06:08:22 GMT
 Content-Type: application/json
@@ -499,3 +480,4 @@ Cache-Control: no-cache
   "name": "Gir",
   "animal_type": 12
 }
+```
