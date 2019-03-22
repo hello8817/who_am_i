@@ -32,7 +32,12 @@
 ### 数据库设计  
 
 ### 接口设计  
-* [RESTful 接口设计规约](https://github.com/hello8817/codingThought/blob/master/codingThought/接口设计/RESTful接口设计规约.md) 
+关于 RESTful 接口设计相关资料,发现另外有一个小伙伴的仓库中有很多不错的资料,分享一下
+- [restful-api-design-references](https://github.com/aisuhua/restful-api-design-references)
+
+下面的是自己整理了一下的相关资料
+
+* [RESTful 接口设计规约](https://github.com/hello8817/codingThought/blob/master/codingThought/接口设计/RESTful接口设计规约.md)
 
 ## :coffee: Java
 
