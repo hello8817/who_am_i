@@ -51,7 +51,7 @@
 
 ### 数据结构
 
-### 算法 
+### 算法
 
 - bloom过滤器
   缺点：有一定的误识别率，删除困难
@@ -68,6 +68,7 @@
 
 
 ## 中间件技术
+- [ElasticSearch](https://github.com/hello8817/codingThought/blob/master/中间件技术/ElasticSearch.md)
 
 ### Redis  
 
@@ -83,6 +84,8 @@
 
 ## 杂谈
 杂谈模块主要记录一些工作中的经验与一些非技术方面的感悟随笔
+- [技术成长](https://github.com/hello8817/codingThought/blob/master/杂谈/技术成长.md)
+- [面试小结](https://github.com/hello8817/codingThought/blob/master/杂谈/面试小结.md)
 
 ## 挑战架构
 这个模块中主要记录系统架构方面的相关内容
@@ -90,3 +93,8 @@
 ### 多活技术
 
 * [多活技术探讨](https://github.com/hello8817/codingThought/blob/master/挑战架构/多活技术/多活技术探讨.md)
+
+### 高可用
+- [websocket与dubbo](https://github.com/hello8817/codingThought/blob/master/挑战架构/高可用/websocket与dubbo.md)
+- [分布式锁](https://github.com/hello8817/codingThought/blob/master/挑战架构/高可用/分布式锁.md)
+- [高可用探索](https://github.com/hello8817/codingThought/blob/master/挑战架构/高可用/高可用探索.md)
