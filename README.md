@@ -103,6 +103,8 @@
 ## 挑战架构
 这个模块中主要记录系统架构方面的相关内容
 
+- [架构的演进路程](https://www.cnblogs.com/zhy-1992/p/9233789.html)
+
 ### 多活技术
 
 * [多活技术探讨](https://github.com/hello8817/codingThought/blob/master/挑战架构/多活技术/多活技术探讨.md)
